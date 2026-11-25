@@ -1,6 +1,7 @@
 # InsQuire
 
 **An AI writing coach and classroom workspace for students and teachers.**
+**Developed by Nathan Young, Gwen Hobbs, Ian Lawson, and Statham Vasquez.**
 
 Live: [ed.insquire.org](https://ed.insquire.org) (Education). The Personal edition isn't open on the public site yet, but it's fully included here and runs locally.
 
