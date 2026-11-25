@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title description">
+  <title id="title">InsQuire assignments and writing workspace</title>
+  <desc id="description">A focused workspace for assignments, due dates, and writing feedback.</desc>
+  <rect width="1200" height="630" fill="#f2f4f6"/>
+  <rect x="0" y="0" width="1200" height="26" fill="#176b9a"/>
+  <rect x="72" y="84" width="1056" height="462" rx="20" fill="#fff" stroke="#d4dbe0" stroke-width="2"/>
+  <rect x="112" y="124" width="68" height="68" rx="16" fill="#176b9a"/>
+  <path d="M130 140h32v7h-32zm0 14h32v7h-32zm0 14h20v7h-20z" fill="#fff"/>
+  <text x="204" y="172" fill="#2d3b45" font-family="Arial, Helvetica, sans-serif" font-size="48" font-weight="700">InsQuire</text>
+  <text x="112" y="286" fill="#2d3b45" font-family="Arial, Helvetica, sans-serif" font-size="58" font-weight="700">Assignments and writing,</text>
+  <text x="112" y="358" fill="#2d3b45" font-family="Arial, Helvetica, sans-serif" font-size="58" font-weight="700">all in one place.</text>
+  <text x="114" y="426" fill="#52616b" font-family="Arial, Helvetica, sans-serif" font-size="27">Track due dates, plan your work, and get feedback on drafts.</text>
+  <rect x="112" y="468" width="238" height="54" rx="8" fill="#176b9a"/>
+  <text x="147" y="504" fill="#fff" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700">Explore InsQuire</text>
+</svg>

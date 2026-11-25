@@ -1,0 +1,38 @@
+INSQUIRE PRIVACY POLICY
+Last updated: October 24, 2026
+
+This Privacy Policy explains how InsQuire collects, uses, stores, and protects information when you use the InsQuire website or macOS application (the "Service").
+
+1. Information we collect
+
+We collect information you provide when you create or use an account, including your name, email address, account role, password hash, classes, assignments, lesson activity, submissions, and feedback. Teachers may upload rubric text files. We do not need database passwords, server credentials, or AI service credentials in the client application.
+
+The Service also receives technical information needed to operate securely, such as IP address, browser or device information, session identifiers, and security logs. Essential cookies support authentication, accessibility preferences, and security protections.
+
+2. How we use information
+
+We use information to authenticate accounts, provide classroom and assignment features, save progress, display feedback, protect the Service, troubleshoot failures, and improve reliability. If you consent, Google Analytics collects page-visit information across public and signed-in pages, including school workspaces, to help us understand and improve the site. Analytics is not loaded unless you accept it. Page paths are sent without query strings. AI feedback is generated to support learning and is not a substitute for a teacher's judgment.
+
+3. How information is shared
+
+Student work and progress are shared with the teacher and class members who are authorized to access the relevant class or assignment. We may use infrastructure and service providers to host, secure, and operate the Service. Google Analytics may process website usage information after you consent. We may disclose information when required by law or when necessary to protect users, the Service, or our rights. We do not sell student work or personal information.
+
+4. Retention and deletion
+
+We retain account and classroom information while an account or classroom relationship is active, and longer when needed for security, legal, or backup purposes. You may request correction or deletion of your account information. For school-managed accounts, direct requests about student records to the relevant school administrator. Deleting information may remove access to related submissions, lesson progress, or class records.
+
+5. Children and schools
+
+InsQuire may be used in educational settings. Schools, teachers, and parents or guardians are responsible for ensuring that use complies with applicable student privacy laws and their policies. We do not knowingly collect more information from children than is needed to provide the Service.
+
+6. Security
+
+We use password hashing, HTTPS, server-side authorization, CSRF protection, access-controlled sessions, and server-side storage for database and AI credentials. No online service can guarantee absolute security. Never share your password or upload confidential material that your school does not permit you to use.
+
+7. Your choices and questions
+
+You may update profile information through the Service and change analytics consent using the Cookie settings link. For school-managed accounts, direct requests about student records to the relevant school administrator.
+
+8. Changes
+
+We may update this policy as the Service changes. The date above identifies the current version.

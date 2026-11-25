@@ -1,0 +1,114 @@
+<div class="min-h-screen">
+  <header class="topbar">
+    <a class="brand" [routerLink]="api.user() ? '/dashboard' : '/'">
+      <span class="brand-mark">IQ</span>
+      <span>InsQuire</span>
+    </a>
+    <button class="mobile-menu-button" type="button" (click)="menuOpen = !menuOpen"
+      [attr.aria-expanded]="menuOpen" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="top-nav" [class.top-nav-open]="menuOpen" aria-label="Main navigation">
+      @if (api.user(); as user) {
+        <a routerLink="/dashboard" routerLinkActive="nav-active" (click)="menuOpen = false">Overview</a>
+        @if (user.role === 'admin') {
+          <a href="/admin/index.php" (click)="menuOpen = false">Platform admin</a>
+        }
+        @if (user.account_scope === 'education' && user.role !== 'admin') {
+          <a routerLink="/classes" routerLinkActive="nav-active" (click)="menuOpen = false">Classes</a>
+        }
+        @if (user.account_scope === 'education' && (user.role === 'student' || user.role === 'teacher')) {
+          <a class="notification-link" routerLink="/notifications" routerLinkActive="nav-active"
+            [attr.aria-label]="'Notifications' + (api.unreadNotificationCount() > 0 ? ', ' + api.unreadNotificationCount() + ' unread' : '')"
+            (click)="menuOpen = false">
+            Notifications
+            @if (api.unreadNotificationCount() > 0) {
+              <span class="notification-count">{{ api.unreadNotificationCount() > 99 ? '99+' : api.unreadNotificationCount() }}</span>
+            }
+          </a>
+        }
+        @if (user.account_scope === 'education' && user.role === 'student') {
+          <details class="workspace-menu">
+            <summary>More</summary>
+            <div class="workspace-menu-panel">
+              <a href="/join-class.php">Join a class</a>
+              <a href="/past-assignments.php">Past assignments</a>
+              <a href="/english-diagnostic.php">English diagnostic</a>
+              <a href="/grades.php">Grades</a>
+              <a href="/messages.php">Messages</a>
+              <a href="/calendar.php">Calendar</a>
+              <a href="/billing.php">Plans and billing</a>
+              <a href="/profile.php">Profile</a>
+            </div>
+          </details>
+        } @else if (user.account_scope === 'education' && user.role === 'teacher') {
+          <details class="workspace-menu">
+            <summary>More</summary>
+            <div class="workspace-menu-panel">
+              <a href="/create-class.php">Create a class</a>
+              <a href="/create-assignment.php">Create an assignment</a>
+              <a href="/lti-settings.php">LTI settings</a>
+              <a href="/gradebook.php">Gradebook</a>
+              <a href="/institutions.php">Institutions</a>
+              <a href="/lesson-library.php">Lesson library</a>
+              <a href="/english-diagnostics.php">English diagnostics</a>
+              <a href="/messages.php">Messages</a>
+              <a href="/calendar.php">Calendar</a>
+              <a href="/billing.php">Plans and billing</a>
+              <a href="/profile.php">Profile</a>
+            </div>
+          </details>
+        } @else if (user.account_scope === 'personal') {
+          <details class="workspace-menu">
+            <summary>More</summary>
+            <div class="workspace-menu-panel">
+              <a href="/personal-planner.php">Assignments and writing coach</a>
+              <a href="/calendar.php">Calendar</a>
+              <a href="/billing.php">Plans and billing</a>
+              <a href="/education.php">InsQuire for Education</a>
+              <a href="/profile.php">Profile</a>
+            </div>
+          </details>
+        }
+        <span class="user-chip"><span class="user-avatar">{{ user.name.charAt(0).toUpperCase() }}</span>{{ user.name }}</span>
+        <button class="nav-signout" type="button" (click)="signOut()" [disabled]="signingOut()">
+          {{ signingOut() ? 'Signing out…' : 'Sign out' }}
+        </button>
+      } @else {
+        <a routerLink="/login" class="nav-login" (click)="menuOpen = false">Sign in</a>
+        <a routerLink="/register" class="nav-join" (click)="menuOpen = false">
+          {{ api.siteScope() === 'education' ? 'Sign up' : 'Get started' }}
+        </a>
+        @if (api.siteScope() === 'personal') {
+          <a href="/education.php" class="nav-link">InsQuire for Education</a>
+        }
+      }
+    </nav>
+  </header>
+
+  @if (api.siteScope() === 'personal') {
+    <aside class="edition-disclaimer" aria-label="About InsQuire Personal">
+      <p>You're using <strong>InsQuire Personal</strong> for individual use. InsQuire Education includes teacher and administrator accounts, classes, student submissions, and gradebooks.</p>
+      <a [href]="api.educationUrl() + '/'">Visit InsQuire Education <span aria-hidden="true">→</span></a>
+    </aside>
+  } @else if (api.showPersonalLink()) {
+    <aside class="edition-disclaimer" aria-label="About InsQuire Education">
+      <p>You're using <strong>InsQuire Education</strong> for schools. Looking for the individual writing coach and planner?</p>
+      <a [href]="api.personalUrl() + '/'">Visit InsQuire Personal <span aria-hidden="true">→</span></a>
+    </aside>
+  }
+
+  <main>
+    <router-outlet />
+  </main>
+
+  <footer class="site-footer">
+    <a [routerLink]="api.user() ? '/dashboard' : '/'" class="footer-brand">InsQuire</a>
+    <span>Personal accounts and school-managed Education accounts.</span>
+    <div><a href="/privacy.php">Privacy</a><a href="/tos.txt">Terms</a><a href="#cookie-settings" id="cookie-settings-link">Cookie settings</a></div>
+  </footer>
+
+  @if (notice()) {
+    <div class="toast" role="status">{{ notice() }}</div>
+  }
+</div>

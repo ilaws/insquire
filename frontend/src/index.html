@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>InsQuire | Planning, writing, and learning</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#301014">
+  <meta name="description" content="InsQuire Personal helps organize assignments, deadlines, and writing projects. InsQuire Education supports school-managed classes, assignments, and feedback.">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <style>
+    .cookie-consent { position: fixed; z-index: 1000; right: 16px; bottom: 16px; left: 16px; display: flex; max-width: 920px; align-items: center; justify-content: space-between; gap: 20px; margin: 0 auto; padding: 16px 18px; border: 1px solid #aeb8bf; border-radius: 8px; background: #fff; color: #2d3b45; box-shadow: 0 8px 32px rgba(25,39,48,.2); }
+    .cookie-consent[hidden] { display: none; }
+    .cookie-consent > p { margin: 0; font-size: .85rem; line-height: 1.5; }
+    .cookie-consent > p a { color: #963242; text-decoration: underline; }
+    .cookie-consent-actions { display: flex; flex: 0 0 auto; flex-wrap: wrap; gap: 8px; }
+    .cookie-consent-actions button { min-height: 40px; padding: 8px 12px; border: 1px solid #aeb8bf; border-radius: 6px; background: #fff; color: #2d3b45; cursor: pointer; font: inherit; font-size: .8rem; }
+    .cookie-consent-actions button[data-cookie-choice="accept"] { border-color: #da3e52; background: #da3e52; color: #fff; }
+    .cookie-consent-actions button:hover { filter: brightness(.95); }
+    .cookie-consent-actions button:focus-visible { outline: 3px solid #301014; outline-offset: 2px; }
+    @media (max-width: 650px) {
+      .cookie-consent { right: 8px; bottom: 8px; left: 8px; align-items: stretch; flex-direction: column; gap: 12px; padding: 14px; }
+      .cookie-consent-actions { display: grid; grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+<body data-analytics-enabled="true" data-analytics-spa="true">
+  <app-root></app-root>
+  <section class="cookie-consent" id="cookie-consent" aria-label="Cookie preferences" hidden>
+    <p>InsQuire uses essential cookies to run the service. With your permission, Google Analytics helps us understand site usage. <a href="/privacy.php">Privacy Policy</a>.</p>
+    <div class="cookie-consent-actions">
+      <button type="button" data-cookie-choice="reject">Reject analytics</button>
+      <button type="button" data-cookie-choice="accept">Accept analytics</button>
+    </div>
+  </section>
+  <script src="/assets/consent.js?v=3" defer></script>
+</body>
+</html>

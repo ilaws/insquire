@@ -1,0 +1,36 @@
+# ---- Secrets: never commit these ----
+.env
+.env.*
+!.env.example
+config/local.php
+private/
+*.pem
+*.key
+
+# ---- Runtime data ----
+storage/*
+!storage/rubrics/
+storage/rubrics/*
+!storage/rubrics/.htaccess
+
+# ---- Build output & dependencies ----
+frontend/node_modules/
+frontend/.angular/
+frontend/dist/
+public/app/
+macos/
+DerivedData/
+
+# ---- Legacy / scratch copies ----
+web/
+ollama/
+outdated/
+*.zip
+public/ai-feedback
+
+# ---- OS / editor ----
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+!frontend/.vscode/

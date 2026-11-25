@@ -1,0 +1,15 @@
+.git
+.env
+.env.*
+config/local.php
+private/
+frontend/node_modules
+frontend/.angular
+public/app
+macos
+web
+ollama
+outdated
+storage
+**/.DS_Store
+*.zip
